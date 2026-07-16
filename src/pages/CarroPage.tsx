@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { FormCarro } from "../components/FormCarro";
 import type { Carro } from "../interfaces/Carro";
+import { BtnVoltar } from "../components/BtnVoltar";
 
 export const CarroPage = () => {
 
@@ -33,7 +34,13 @@ export const CarroPage = () => {
     return (
         <div className="flex flex-col items-center bg-blue-300 w-full h-full">
             <h1 className="text-4xl font-bold">Carros</h1>
+            <BtnVoltar
+                className="self-start ml-8 bg-blue-600 text-white px-3 py-1 rounded-md font-bold hover:bg-blue-700 transition"
+                to="/"
+            />
             <h5 className="m-4 text-2xl">Seja bem vindo, aqui você verá todas as informações sobre nossos carros.</h5>
+
+
 
             <FormCarro
                 marca={marca}
